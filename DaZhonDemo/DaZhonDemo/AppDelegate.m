@@ -7,16 +7,19 @@
 //
 
 #import "AppDelegate.h"
-
+#import "GuideViewController.h"
 @interface AppDelegate ()
-
 @end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    //设备window可见!!
+    [self.window makeKeyAndVisible];
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    GuideViewController *guideVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"GuideViewController"];
+    [self.window  addSubview:guideVC.view];
     return YES;
 }
 
