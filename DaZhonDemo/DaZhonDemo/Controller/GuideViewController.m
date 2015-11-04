@@ -9,10 +9,11 @@
 #import "GuideViewController.h"
 
 @interface GuideViewController ()
-
+@property (nonatomic,strong)UIImageView *guideView;
 @end
 
 @implementation GuideViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -21,10 +22,10 @@
     scrollView.contentSize = CGSizeMake(self.view.frame.size.width*3, self.view.frame.size.height);
     //将所有图片以子视图的方式添加到scrollView
     for (int i = 0; i<3; i++) {
-        UIImageView *guideView = [[UIImageView alloc]initWithFrame:CGRectMake(scrollView.frame.size.width * i, 0, scrollView.frame.size.width, scrollView.frame.size.height)];
+        self.guideView = [[UIImageView alloc]initWithFrame:CGRectMake(scrollView.frame.size.width * i, 0, scrollView.frame.size.width, scrollView.frame.size.height)];
         NSString *imageName = [NSString stringWithFormat:@"引导页－%d.jpg",i+1];
-        guideView.image = [UIImage imageNamed:imageName];
-        [scrollView addSubview:guideView];
+        self.guideView.image = [UIImage imageNamed:imageName];
+        [scrollView addSubview:self.guideView];
     }
     //设置scrollView
     scrollView.bounces = NO;
@@ -35,16 +36,11 @@
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
     button.frame = CGRectMake(scrollView.frame.size.width*2, 0, scrollView.frame.size.width, scrollView.frame.size.height);
     [button addTarget:self action:@selector(enter) forControlEvents:UIControlEventTouchUpInside];
-    [scrollView addSubview:button];
+    [scrollView insertSubview:button aboveSubview:self.guideView];
 }
 
 - (void)enter{
     [self.view removeFromSuperview];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 /*

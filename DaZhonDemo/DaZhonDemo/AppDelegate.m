@@ -9,17 +9,19 @@
 #import "AppDelegate.h"
 #import "GuideViewController.h"
 @interface AppDelegate ()
+@property (nonatomic, strong) GuideViewController *guideVC;
 @end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    //设备window可见!!
+    //设置window可见!!
     [self.window makeKeyAndVisible];
+    //要把GuideViewController上升为属性,才可以调用里面的方法
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    GuideViewController *guideVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"GuideViewController"];
-    [self.window  addSubview:guideVC.view];
+    self.guideVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"GuideViewController"];
+    [self.window  addSubview:self.guideVC.view];
     return YES;
 }
 

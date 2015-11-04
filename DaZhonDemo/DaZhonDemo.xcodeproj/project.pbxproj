@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		2C8377C51B11A70D7706D0EE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B05BE7B631D2F68FFC2CC53 /* libPods.a */; };
+		A04B909F1BE9E19800309D5A /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A04B909E1BE9E19800309D5A /* HomePageViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A04B90A21BEA0BB400309D5A /* HomePageHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A04B90A11BEA0BB400309D5A /* HomePageHeaderView.m */; settings = {ASSET_TAGS = (); }; };
 		A0E9089D1BE89B6900D03D53 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E9089C1BE89B6900D03D53 /* main.m */; };
 		A0E908A01BE89B6900D03D53 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E9089F1BE89B6900D03D53 /* AppDelegate.m */; };
 		A0E908A61BE89B6900D03D53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0E908A41BE89B6900D03D53 /* Main.storyboard */; };
 		A0E908A81BE89B6900D03D53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0E908A71BE89B6900D03D53 /* Assets.xcassets */; };
-		A0E908AB1BE89B6900D03D53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0E908A91BE89B6900D03D53 /* LaunchScreen.storyboard */; };
 		A0E908B61BE89B6900D03D53 /* DaZhonDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E908B51BE89B6900D03D53 /* DaZhonDemoTests.m */; };
 		A0E908C11BE89B6900D03D53 /* DaZhonDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E908C01BE89B6900D03D53 /* DaZhonDemoUITests.m */; };
-		A0E909631BE8AAE600D03D53 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E909621BE8AAE600D03D53 /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
 		A0E909AB1BE8AB1C00D03D53 /* category.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0E909651BE8AB1C00D03D53 /* category.plist */; settings = {ASSET_TAGS = (); }; };
 		A0E909AC1BE8AB1C00D03D53 /* region.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0E909661BE8AB1C00D03D53 /* region.plist */; settings = {ASSET_TAGS = (); }; };
 		A0E909AD1BE8AB1C00D03D53 /* search_03@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E909671BE8AB1C00D03D53 /* search_03@2x.png */; settings = {ASSET_TAGS = (); }; };
@@ -108,13 +108,16 @@
 
 /* Begin PBXFileReference section */
 		4B05BE7B631D2F68FFC2CC53 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A04B909D1BE9E19800309D5A /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePageViewController.h; path = Controller/HomePageViewController.h; sourceTree = "<group>"; };
+		A04B909E1BE9E19800309D5A /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomePageViewController.m; path = Controller/HomePageViewController.m; sourceTree = "<group>"; };
+		A04B90A01BEA0BB400309D5A /* HomePageHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePageHeaderView.h; path = View/HomePageHeaderView.h; sourceTree = "<group>"; };
+		A04B90A11BEA0BB400309D5A /* HomePageHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomePageHeaderView.m; path = View/HomePageHeaderView.m; sourceTree = "<group>"; };
 		A0E908981BE89B6900D03D53 /* DaZhonDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaZhonDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0E9089C1BE89B6900D03D53 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A0E9089E1BE89B6900D03D53 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A0E9089F1BE89B6900D03D53 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A0E908A51BE89B6900D03D53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A0E908A71BE89B6900D03D53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A0E908AA1BE89B6900D03D53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0E908AC1BE89B6900D03D53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0E908B11BE89B6900D03D53 /* DaZhonDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DaZhonDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0E908B51BE89B6900D03D53 /* DaZhonDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DaZhonDemoTests.m; sourceTree = "<group>"; };
@@ -122,8 +125,6 @@
 		A0E908BC1BE89B6900D03D53 /* DaZhonDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DaZhonDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0E908C01BE89B6900D03D53 /* DaZhonDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DaZhonDemoUITests.m; sourceTree = "<group>"; };
 		A0E908C21BE89B6900D03D53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A0E909611BE8AAE600D03D53 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = Controller/ViewController.h; sourceTree = "<group>"; };
-		A0E909621BE8AAE600D03D53 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Controller/ViewController.m; sourceTree = "<group>"; };
 		A0E909651BE8AB1C00D03D53 /* category.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = category.plist; sourceTree = "<group>"; };
 		A0E909661BE8AB1C00D03D53 /* region.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = region.plist; sourceTree = "<group>"; };
 		A0E909671BE8AB1C00D03D53 /* search_03@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search_03@2x.png"; sourceTree = "<group>"; };
@@ -276,7 +277,6 @@
 				A0E9095B1BE8A93B00D03D53 /* Model */,
 				A0E908A41BE89B6900D03D53 /* Main.storyboard */,
 				A0E908A71BE89B6900D03D53 /* Assets.xcassets */,
-				A0E908A91BE89B6900D03D53 /* LaunchScreen.storyboard */,
 				A0E908AC1BE89B6900D03D53 /* Info.plist */,
 				A0E9089B1BE89B6900D03D53 /* Supporting Files */,
 			);
@@ -321,6 +321,8 @@
 		A0E9095C1BE8A94F00D03D53 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A04B90A01BEA0BB400309D5A /* HomePageHeaderView.h */,
+				A04B90A11BEA0BB400309D5A /* HomePageHeaderView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -328,10 +330,10 @@
 		A0E9095D1BE8A96400D03D53 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A0E909611BE8AAE600D03D53 /* ViewController.h */,
-				A0E909621BE8AAE600D03D53 /* ViewController.m */,
 				A0E909F21BE8B1E800D03D53 /* GuideViewController.h */,
 				A0E909F31BE8B1E800D03D53 /* GuideViewController.m */,
+				A04B909D1BE9E19800309D5A /* HomePageViewController.h */,
+				A04B909E1BE9E19800309D5A /* HomePageViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -546,7 +548,6 @@
 				A0E909E41BE8AB1C00D03D53 /* 首页_11@2x.png in Resources */,
 				A0E909EE1BE8AB1C00D03D53 /* 首页_GPS定位系统_03@2x.png in Resources */,
 				A0E909BA1BE8AB1C00D03D53 /* 团购_全部分类_美食_34@2x.png in Resources */,
-				A0E908AB1BE89B6900D03D53 /* LaunchScreen.storyboard in Resources */,
 				A0E909E21BE8AB1C00D03D53 /* 首页_03@2x.png in Resources */,
 				A0E909CE1BE8AB1C00D03D53 /* 我的－我的账户_17@2x.png in Resources */,
 				A0E909ED1BE8AB1C00D03D53 /* 首页_35@2x.png in Resources */,
@@ -664,9 +665,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A04B90A21BEA0BB400309D5A /* HomePageHeaderView.m in Sources */,
+				A04B909F1BE9E19800309D5A /* HomePageViewController.m in Sources */,
 				A0E908A01BE89B6900D03D53 /* AppDelegate.m in Sources */,
 				A0E909F41BE8B1E800D03D53 /* GuideViewController.m in Sources */,
-				A0E909631BE8AAE600D03D53 /* ViewController.m in Sources */,
 				A0E9089D1BE89B6900D03D53 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -709,14 +711,6 @@
 				A0E908A51BE89B6900D03D53 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A0E908A91BE89B6900D03D53 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A0E908AA1BE89B6900D03D53 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -809,9 +803,11 @@
 			baseConfigurationReference = B73A1A7830DDB4682500324B /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = Launchimage;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = /Users/doubleJJ/Desktop/DaZhonDemo/DaZhonDemo/DaZhonDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = DaZhonDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = qingdaonews.DaZhonDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -823,9 +819,11 @@
 			baseConfigurationReference = B5C6E2CA01156EA1999287A4 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = Launchimage;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = /Users/doubleJJ/Desktop/DaZhonDemo/DaZhonDemo/DaZhonDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = DaZhonDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = qingdaonews.DaZhonDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

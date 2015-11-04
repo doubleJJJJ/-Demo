@@ -9,7 +9,12 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
+
+
 #endif /* PrefixHeader_pch */
+//获取屏幕宽高
+#define SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
+#define SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
 
 //判断ios不同尺寸的屏幕
 #define iPhone4S ([UIScreen instancesRespondToSelector:@selector(currentMode)]?CGSizeEqualToSize(CGSizeMake(640, 960),[[UIScreen mainScreen] currentMode].size):NO)
@@ -21,3 +26,6 @@
 #define iOS7 [[[UIDevice currentDevice] systemVersion] doubleValue] >= 7.0
 #define iOS8 [[[UIDevice currentDevice] systemVersion] doubleValue] >= 8.0
 #define iOS9 [[[UIDevice currentDevice] systemVersion] doubleValue] >= 9.0
+
+//设置导航栏颜色
+#define TOPIC_COLOR_ORANGE [UIColor colorWithRed:247.0/255 green:135.0/255 blue:74.0/255 alpha:1.0]
