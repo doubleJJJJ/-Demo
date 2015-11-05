@@ -8,8 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		2C8377C51B11A70D7706D0EE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B05BE7B631D2F68FFC2CC53 /* libPods.a */; };
+		A03CE8171BEB5B7C00A68D72 /* BusinessTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CE8151BEB5B7C00A68D72 /* BusinessTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		A03CE8181BEB5B7C00A68D72 /* BusinessTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A03CE8161BEB5B7C00A68D72 /* BusinessTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		A04B909F1BE9E19800309D5A /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A04B909E1BE9E19800309D5A /* HomePageViewController.m */; settings = {ASSET_TAGS = (); }; };
 		A04B90A21BEA0BB400309D5A /* HomePageHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A04B90A11BEA0BB400309D5A /* HomePageHeaderView.m */; settings = {ASSET_TAGS = (); }; };
+		A04B90A61BEB34BC00309D5A /* DianpingApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A04B90A51BEB34BC00309D5A /* DianpingApi.m */; settings = {ASSET_TAGS = (); }; };
+		A04B90A91BEB375A00309D5A /* BusinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A04B90A81BEB375A00309D5A /* BusinessViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A04B90AC1BEB4FF500309D5A /* JsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A04B90AB1BEB4FF500309D5A /* JsonParser.m */; settings = {ASSET_TAGS = (); }; };
+		A04B90AF1BEB51FE00309D5A /* BusinessInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A04B90AE1BEB51FE00309D5A /* BusinessInfo.m */; settings = {ASSET_TAGS = (); }; };
 		A0E9089D1BE89B6900D03D53 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E9089C1BE89B6900D03D53 /* main.m */; };
 		A0E908A01BE89B6900D03D53 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E9089F1BE89B6900D03D53 /* AppDelegate.m */; };
 		A0E908A61BE89B6900D03D53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0E908A41BE89B6900D03D53 /* Main.storyboard */; };
@@ -108,10 +114,21 @@
 
 /* Begin PBXFileReference section */
 		4B05BE7B631D2F68FFC2CC53 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A03CE8141BEB5B7C00A68D72 /* BusinessTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BusinessTableViewCell.h; path = View/BusinessTableViewCell.h; sourceTree = "<group>"; };
+		A03CE8151BEB5B7C00A68D72 /* BusinessTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BusinessTableViewCell.m; path = View/BusinessTableViewCell.m; sourceTree = "<group>"; };
+		A03CE8161BEB5B7C00A68D72 /* BusinessTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BusinessTableViewCell.xib; path = View/BusinessTableViewCell.xib; sourceTree = "<group>"; };
 		A04B909D1BE9E19800309D5A /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePageViewController.h; path = Controller/HomePageViewController.h; sourceTree = "<group>"; };
 		A04B909E1BE9E19800309D5A /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomePageViewController.m; path = Controller/HomePageViewController.m; sourceTree = "<group>"; };
 		A04B90A01BEA0BB400309D5A /* HomePageHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePageHeaderView.h; path = View/HomePageHeaderView.h; sourceTree = "<group>"; };
 		A04B90A11BEA0BB400309D5A /* HomePageHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomePageHeaderView.m; path = View/HomePageHeaderView.m; sourceTree = "<group>"; };
+		A04B90A41BEB34BC00309D5A /* DianpingApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DianpingApi.h; path = Utils/DianpingApi.h; sourceTree = "<group>"; };
+		A04B90A51BEB34BC00309D5A /* DianpingApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DianpingApi.m; path = Utils/DianpingApi.m; sourceTree = "<group>"; };
+		A04B90A71BEB375A00309D5A /* BusinessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BusinessViewController.h; path = Controller/BusinessViewController.h; sourceTree = "<group>"; };
+		A04B90A81BEB375A00309D5A /* BusinessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BusinessViewController.m; path = Controller/BusinessViewController.m; sourceTree = "<group>"; };
+		A04B90AA1BEB4FF500309D5A /* JsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JsonParser.h; path = Utils/JsonParser.h; sourceTree = "<group>"; };
+		A04B90AB1BEB4FF500309D5A /* JsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JsonParser.m; path = Utils/JsonParser.m; sourceTree = "<group>"; };
+		A04B90AD1BEB51FE00309D5A /* BusinessInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BusinessInfo.h; path = Model/BusinessInfo.h; sourceTree = "<group>"; };
+		A04B90AE1BEB51FE00309D5A /* BusinessInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BusinessInfo.m; path = Model/BusinessInfo.m; sourceTree = "<group>"; };
 		A0E908981BE89B6900D03D53 /* DaZhonDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaZhonDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0E9089C1BE89B6900D03D53 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A0E9089E1BE89B6900D03D53 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -245,6 +262,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A04B90A31BEB339900309D5A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A04B90AA1BEB4FF500309D5A /* JsonParser.h */,
+				A04B90AB1BEB4FF500309D5A /* JsonParser.m */,
+				A04B90A41BEB34BC00309D5A /* DianpingApi.h */,
+				A04B90A51BEB34BC00309D5A /* DianpingApi.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		A0E9088F1BE89B6900D03D53 = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +300,7 @@
 			children = (
 				A0E9089E1BE89B6900D03D53 /* AppDelegate.h */,
 				A0E9089F1BE89B6900D03D53 /* AppDelegate.m */,
+				A04B90A31BEB339900309D5A /* Utils */,
 				A0E9095D1BE8A96400D03D53 /* Controller */,
 				A0E9095C1BE8A94F00D03D53 /* View */,
 				A0E9095B1BE8A93B00D03D53 /* Model */,
@@ -314,6 +343,8 @@
 		A0E9095B1BE8A93B00D03D53 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A04B90AD1BEB51FE00309D5A /* BusinessInfo.h */,
+				A04B90AE1BEB51FE00309D5A /* BusinessInfo.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -323,6 +354,9 @@
 			children = (
 				A04B90A01BEA0BB400309D5A /* HomePageHeaderView.h */,
 				A04B90A11BEA0BB400309D5A /* HomePageHeaderView.m */,
+				A03CE8141BEB5B7C00A68D72 /* BusinessTableViewCell.h */,
+				A03CE8151BEB5B7C00A68D72 /* BusinessTableViewCell.m */,
+				A03CE8161BEB5B7C00A68D72 /* BusinessTableViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -334,6 +368,8 @@
 				A0E909F31BE8B1E800D03D53 /* GuideViewController.m */,
 				A04B909D1BE9E19800309D5A /* HomePageViewController.h */,
 				A04B909E1BE9E19800309D5A /* HomePageViewController.m */,
+				A04B90A71BEB375A00309D5A /* BusinessViewController.h */,
+				A04B90A81BEB375A00309D5A /* BusinessViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -546,6 +582,7 @@
 				A0E909C81BE8AB1C00D03D53 /* 引导页－3.jpg in Resources */,
 				A0E909B81BE8AB1C00D03D53 /* 团购_全部分类_美食_28@2x.png in Resources */,
 				A0E909E41BE8AB1C00D03D53 /* 首页_11@2x.png in Resources */,
+				A03CE8181BEB5B7C00A68D72 /* BusinessTableViewCell.xib in Resources */,
 				A0E909EE1BE8AB1C00D03D53 /* 首页_GPS定位系统_03@2x.png in Resources */,
 				A0E909BA1BE8AB1C00D03D53 /* 团购_全部分类_美食_34@2x.png in Resources */,
 				A0E909E21BE8AB1C00D03D53 /* 首页_03@2x.png in Resources */,
@@ -665,11 +702,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A04B90A91BEB375A00309D5A /* BusinessViewController.m in Sources */,
+				A04B90A61BEB34BC00309D5A /* DianpingApi.m in Sources */,
 				A04B90A21BEA0BB400309D5A /* HomePageHeaderView.m in Sources */,
+				A03CE8171BEB5B7C00A68D72 /* BusinessTableViewCell.m in Sources */,
 				A04B909F1BE9E19800309D5A /* HomePageViewController.m in Sources */,
 				A0E908A01BE89B6900D03D53 /* AppDelegate.m in Sources */,
 				A0E909F41BE8B1E800D03D53 /* GuideViewController.m in Sources */,
+				A04B90AC1BEB4FF500309D5A /* JsonParser.m in Sources */,
 				A0E9089D1BE89B6900D03D53 /* main.m in Sources */,
+				A04B90AF1BEB51FE00309D5A /* BusinessInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
