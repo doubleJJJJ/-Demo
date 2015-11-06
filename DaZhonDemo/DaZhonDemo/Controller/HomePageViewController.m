@@ -10,11 +10,13 @@
 #import "HomePageHeaderView.h"
 #import "DianpingApi.h"
 #import "BusinessTableViewCell.h"
+#import "BusinessViewController.h"
 @interface HomePageViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong,nonatomic)NSMutableArray *businesses;
 @property (nonatomic,strong) NSMutableDictionary *params;
 @property (nonatomic) int currentPage;
+@property (weak, nonatomic) IBOutlet UILabel *cityNameLabel;
 
 @end
 
@@ -31,12 +33,29 @@
     self.currentPage = 1;
     [self.params setObject:@(self.currentPage) forKey:@"page"];
     [self.params setObject:@(20) forKey:@"limit"];
+    //添加监听，用户点击headView时响应
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(clickCategory:) name:@"clickCategory" object:nil];
+}
+
+- (void)clickCategory:(NSNotification*)notification{
+    NSString *category = [notification.userInfo objectForKey:@"category"];
+    [self performSegueWithIdentifier:@"businessvc" sender:category];
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    NSString *cityName = [ud objectForKey:@"cityName"];
+    if (cityName == nil) {
+        cityName = @"北京";
+        [ud setObject:cityName forKey:@"cityName"];
+        [ud synchronize];
+    }
+    self.cityNameLabel.text = cityName;
     //发送请求
     [DianpingApi requestBusinessWithParams:self.params AndCallback:^(id obj) {
         self.businesses = obj;
         [self.tableView reloadData];
     }];
-    
 }
 
 #pragma mark - TableViewDataSource
@@ -57,17 +76,33 @@
     }
     BusinessInfo *business = self.businesses[indexPath.row];
     cell.business = business;
+    //
+    if (self.businesses.count - 1 == indexPath.row) {
+        [self.params setObject:@(++self.currentPage) forKey:@"page"];
+        [DianpingApi requestBusinessWithParams:self.params AndCallback:^(id obj) {
+            [self.businesses addObjectsFromArray:obj];
+            [self.tableView reloadData];
+        }];
+    }
     return cell;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 90;
 }
-*/
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    NSString *titie =  @"猜你喜欢";
+    return titie;
+}
+
+#pragma mark - Navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"businessvc"]) {
+        BusinessViewController *businessVC = segue.destinationViewController;
+        businessVC.category = sender;
+    }
+}
+
 
 @end

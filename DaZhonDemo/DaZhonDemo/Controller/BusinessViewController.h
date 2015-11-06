@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BusinessViewController : UIViewController
-
+@interface BusinessViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@property (nonatomic,strong)NSString *category;
 @end

@@ -7,21 +7,51 @@
 //
 
 #import "BusinessViewController.h"
-
+#import "BusinessTableViewCell.h"
+#import "DianpingApi.h"
 @interface BusinessViewController ()
-
+@property (nonatomic,strong)NSMutableArray *business;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic,strong)NSMutableDictionary *params;
+@property (nonatomic) NSInteger page;
 @end
 
 @implementation BusinessViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.params = [NSMutableDictionary dictionary];
+    [self.params setObject:@(1) forKey:@"page"];
+    [self.params setObject:self.category forKey:@"category"];
+    [DianpingApi requestBusinessWithParams:self.params AndCallback:^(id obj) {
+        self.business = obj;
+        [self.tableView reloadData];
+    }];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma tableView dataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.business.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    BusinessTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BusinessTableViewCell"];
+    if (cell == nil) {
+        cell = [[[NSBundle mainBundle]loadNibNamed:@"BusinessTableViewCell" owner:self options:nil]firstObject];
+    }
+    if (self.business.count -1 == indexPath.row) {
+        [self.params setObject:@(++self.page) forKey:@"page"];
+        [DianpingApi requestBusinessWithParams:self.params AndCallback:^(id obj) {
+            [self.business addObjectsFromArray:obj];
+            [self.tableView reloadData];
+        }];
+    }
+    cell.business = self.business[indexPath.row];
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 90;
 }
 
 /*

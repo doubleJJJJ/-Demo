@@ -12,8 +12,8 @@
 #import <CommonCrypto/CommonCryptor.h>
 #import "JsonParser.h"
 @implementation DianpingApi
-#define APP_KEY @"622195982"
-#define APP_SECRET @"1a279951329c466b80ce39ed88d34b3b"
+#define APP_KEY @"3042736894"
+#define APP_SECRET @"a4881577162f43caaf27a67610119376"
 
 //生成请求签名
 + (NSString *)serializeURL:(NSString *)baseURL params:(NSDictionary *)params
@@ -71,8 +71,7 @@
 + (void)requestBusinessWithParams:(NSDictionary *)params AndCallback:(MyCallback)callback{
     NSString *cityName = [[NSUserDefaults standardUserDefaults]objectForKey:@"cityName"];
     NSMutableDictionary *allParams = [params mutableCopy];
-    //城市要改
-    [allParams setObject:@"北京" forKey:@"city"];
+    [allParams setObject:cityName forKey:@"city"];
     NSString *path = @"http://api.dianping.com/v1/business/find_businesses";
     path = [DianpingApi serializeURL:path params:allParams];
     

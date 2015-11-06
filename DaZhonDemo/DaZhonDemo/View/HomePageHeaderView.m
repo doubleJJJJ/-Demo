@@ -13,7 +13,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.frame = CGRectMake(0, 0, SCREEN_WIDTH, 200);
-        NSArray *labelText = @[@"美食",@"电影",@"酒店",@"KTV",@"小吃",@"休闲",@"今日",@"更多"];
+        NSArray *labelText = @[@"美食",@"电影",@"酒店",@"KTV",@"购物",@"休闲娱乐",@"旅行社",@"更多"];
         for (int i = 0; i<8; i++) {
             //设置headButton
             CGFloat buttonWidth = SCREEN_WIDTH/4;
@@ -50,16 +50,16 @@
             category = @"KTV";
             break;
         case 4:
-            category = @"小吃";
+            category = @"购物";
             break;
         case 5:
-            category = @"休闲";
+            category = @"休闲娱乐";
             break;
         case 6:
-            category = @"今日";
+            category = @"旅行社";
             break;
         case 7:
-            category = @"更多";
+            category = @"购物";
             break;
     }
     [[NSNotificationCenter defaultCenter]postNotificationName:@"clickCategory" object:nil userInfo:@{@"category":category}];
