@@ -10,12 +10,18 @@
 		2C8377C51B11A70D7706D0EE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B05BE7B631D2F68FFC2CC53 /* libPods.a */; };
 		A03CE8171BEB5B7C00A68D72 /* BusinessTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CE8151BEB5B7C00A68D72 /* BusinessTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		A03CE8181BEB5B7C00A68D72 /* BusinessTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A03CE8161BEB5B7C00A68D72 /* BusinessTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		A04B909F1BE9E19800309D5A /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A04B909E1BE9E19800309D5A /* HomePageViewController.m */; settings = {ASSET_TAGS = (); }; };
 		A04B90A21BEA0BB400309D5A /* HomePageHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A04B90A11BEA0BB400309D5A /* HomePageHeaderView.m */; settings = {ASSET_TAGS = (); }; };
 		A04B90A61BEB34BC00309D5A /* DianpingApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A04B90A51BEB34BC00309D5A /* DianpingApi.m */; settings = {ASSET_TAGS = (); }; };
-		A04B90A91BEB375A00309D5A /* BusinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A04B90A81BEB375A00309D5A /* BusinessViewController.m */; settings = {ASSET_TAGS = (); }; };
 		A04B90AC1BEB4FF500309D5A /* JsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A04B90AB1BEB4FF500309D5A /* JsonParser.m */; settings = {ASSET_TAGS = (); }; };
 		A04B90AF1BEB51FE00309D5A /* BusinessInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A04B90AE1BEB51FE00309D5A /* BusinessInfo.m */; settings = {ASSET_TAGS = (); }; };
+		A0E7B0121BF07CFD0010A2F0 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E7B0111BF07CFD0010A2F0 /* WebViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A0E7B01D1BF08C710010A2F0 /* BusinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E7B0181BF08C710010A2F0 /* BusinessViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A0E7B01E1BF08C710010A2F0 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E7B01A1BF08C710010A2F0 /* HomePageViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A0E7B01F1BF08C710010A2F0 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E7B01C1BF08C710010A2F0 /* SearchViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A0E7B0221BF09F640010A2F0 /* SelectCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E7B0211BF09F640010A2F0 /* SelectCityViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A0E7B0251BF0A3060010A2F0 /* category.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0E7B0231BF0A3060010A2F0 /* category.plist */; settings = {ASSET_TAGS = (); }; };
+		A0E7B0261BF0A3060010A2F0 /* region.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0E7B0241BF0A3060010A2F0 /* region.plist */; settings = {ASSET_TAGS = (); }; };
+		A0E7B0281BF0A3FB0010A2F0 /* citys.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0E7B0271BF0A3FB0010A2F0 /* citys.plist */; settings = {ASSET_TAGS = (); }; };
 		A0E9089D1BE89B6900D03D53 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E9089C1BE89B6900D03D53 /* main.m */; };
 		A0E908A01BE89B6900D03D53 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E9089F1BE89B6900D03D53 /* AppDelegate.m */; };
 		A0E908A61BE89B6900D03D53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0E908A41BE89B6900D03D53 /* Main.storyboard */; };
@@ -117,18 +123,27 @@
 		A03CE8141BEB5B7C00A68D72 /* BusinessTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BusinessTableViewCell.h; path = View/BusinessTableViewCell.h; sourceTree = "<group>"; };
 		A03CE8151BEB5B7C00A68D72 /* BusinessTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BusinessTableViewCell.m; path = View/BusinessTableViewCell.m; sourceTree = "<group>"; };
 		A03CE8161BEB5B7C00A68D72 /* BusinessTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BusinessTableViewCell.xib; path = View/BusinessTableViewCell.xib; sourceTree = "<group>"; };
-		A04B909D1BE9E19800309D5A /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePageViewController.h; path = Controller/HomePageViewController.h; sourceTree = "<group>"; };
-		A04B909E1BE9E19800309D5A /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomePageViewController.m; path = Controller/HomePageViewController.m; sourceTree = "<group>"; };
 		A04B90A01BEA0BB400309D5A /* HomePageHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePageHeaderView.h; path = View/HomePageHeaderView.h; sourceTree = "<group>"; };
 		A04B90A11BEA0BB400309D5A /* HomePageHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomePageHeaderView.m; path = View/HomePageHeaderView.m; sourceTree = "<group>"; };
 		A04B90A41BEB34BC00309D5A /* DianpingApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DianpingApi.h; path = Utils/DianpingApi.h; sourceTree = "<group>"; };
 		A04B90A51BEB34BC00309D5A /* DianpingApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DianpingApi.m; path = Utils/DianpingApi.m; sourceTree = "<group>"; };
-		A04B90A71BEB375A00309D5A /* BusinessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BusinessViewController.h; path = Controller/BusinessViewController.h; sourceTree = "<group>"; };
-		A04B90A81BEB375A00309D5A /* BusinessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BusinessViewController.m; path = Controller/BusinessViewController.m; sourceTree = "<group>"; };
 		A04B90AA1BEB4FF500309D5A /* JsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JsonParser.h; path = Utils/JsonParser.h; sourceTree = "<group>"; };
 		A04B90AB1BEB4FF500309D5A /* JsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JsonParser.m; path = Utils/JsonParser.m; sourceTree = "<group>"; };
 		A04B90AD1BEB51FE00309D5A /* BusinessInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BusinessInfo.h; path = Model/BusinessInfo.h; sourceTree = "<group>"; };
 		A04B90AE1BEB51FE00309D5A /* BusinessInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BusinessInfo.m; path = Model/BusinessInfo.m; sourceTree = "<group>"; };
+		A0E7B0101BF07CFD0010A2F0 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewController.h; path = Controller/WebViewController.h; sourceTree = "<group>"; };
+		A0E7B0111BF07CFD0010A2F0 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = Controller/WebViewController.m; sourceTree = "<group>"; };
+		A0E7B0171BF08C710010A2F0 /* BusinessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BusinessViewController.h; path = Controller/HomePage/BusinessViewController.h; sourceTree = "<group>"; };
+		A0E7B0181BF08C710010A2F0 /* BusinessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BusinessViewController.m; path = Controller/HomePage/BusinessViewController.m; sourceTree = "<group>"; };
+		A0E7B0191BF08C710010A2F0 /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePageViewController.h; path = Controller/HomePage/HomePageViewController.h; sourceTree = "<group>"; };
+		A0E7B01A1BF08C710010A2F0 /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomePageViewController.m; path = Controller/HomePage/HomePageViewController.m; sourceTree = "<group>"; };
+		A0E7B01B1BF08C710010A2F0 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchViewController.h; path = Controller/HomePage/SearchViewController.h; sourceTree = "<group>"; };
+		A0E7B01C1BF08C710010A2F0 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = Controller/HomePage/SearchViewController.m; sourceTree = "<group>"; };
+		A0E7B0201BF09F640010A2F0 /* SelectCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectCityViewController.h; path = Controller/HomePage/SelectCityViewController.h; sourceTree = "<group>"; };
+		A0E7B0211BF09F640010A2F0 /* SelectCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectCityViewController.m; path = Controller/HomePage/SelectCityViewController.m; sourceTree = "<group>"; };
+		A0E7B0231BF0A3060010A2F0 /* category.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = category.plist; sourceTree = "<group>"; };
+		A0E7B0241BF0A3060010A2F0 /* region.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = region.plist; sourceTree = "<group>"; };
+		A0E7B0271BF0A3FB0010A2F0 /* citys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = citys.plist; sourceTree = "<group>"; };
 		A0E908981BE89B6900D03D53 /* DaZhonDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaZhonDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0E9089C1BE89B6900D03D53 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A0E9089E1BE89B6900D03D53 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -273,6 +288,21 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
+		A0E7B0131BF08BA30010A2F0 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				A0E7B0171BF08C710010A2F0 /* BusinessViewController.h */,
+				A0E7B0181BF08C710010A2F0 /* BusinessViewController.m */,
+				A0E7B0191BF08C710010A2F0 /* HomePageViewController.h */,
+				A0E7B01A1BF08C710010A2F0 /* HomePageViewController.m */,
+				A0E7B0201BF09F640010A2F0 /* SelectCityViewController.h */,
+				A0E7B0211BF09F640010A2F0 /* SelectCityViewController.m */,
+				A0E7B01B1BF08C710010A2F0 /* SearchViewController.h */,
+				A0E7B01C1BF08C710010A2F0 /* SearchViewController.m */,
+			);
+			name = HomePage;
+			sourceTree = "<group>";
+		};
 		A0E9088F1BE89B6900D03D53 = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +347,9 @@
 			children = (
 				A0E9089C1BE89B6900D03D53 /* main.m */,
 				A0E909F11BE8AD4C00D03D53 /* PrefixHeader.pch */,
+				A0E7B0271BF0A3FB0010A2F0 /* citys.plist */,
+				A0E7B0231BF0A3060010A2F0 /* category.plist */,
+				A0E7B0241BF0A3060010A2F0 /* region.plist */,
 				A0E909641BE8AB1C00D03D53 /* Picture */,
 			);
 			name = "Supporting Files";
@@ -366,10 +399,9 @@
 			children = (
 				A0E909F21BE8B1E800D03D53 /* GuideViewController.h */,
 				A0E909F31BE8B1E800D03D53 /* GuideViewController.m */,
-				A04B909D1BE9E19800309D5A /* HomePageViewController.h */,
-				A04B909E1BE9E19800309D5A /* HomePageViewController.m */,
-				A04B90A71BEB375A00309D5A /* BusinessViewController.h */,
-				A04B90A81BEB375A00309D5A /* BusinessViewController.m */,
+				A0E7B0101BF07CFD0010A2F0 /* WebViewController.h */,
+				A0E7B0111BF07CFD0010A2F0 /* WebViewController.m */,
+				A0E7B0131BF08BA30010A2F0 /* HomePage */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -578,6 +610,7 @@
 				A0E909F01BE8AB1C00D03D53 /* 首页_GPS定位系统_07@2x.png in Resources */,
 				A0E909B41BE8AB1C00D03D53 /* 团购_全部分类_美食_11@2x.png in Resources */,
 				A0E909C31BE8AB1C00D03D53 /* 团购_商户分类stare2@2x.png in Resources */,
+				A0E7B0281BF0A3FB0010A2F0 /* citys.plist in Resources */,
 				A0E909E81BE8AB1C00D03D53 /* 首页_15@2x.png in Resources */,
 				A0E909C81BE8AB1C00D03D53 /* 引导页－3.jpg in Resources */,
 				A0E909B81BE8AB1C00D03D53 /* 团购_全部分类_美食_28@2x.png in Resources */,
@@ -595,6 +628,7 @@
 				A0E909D41BE8AB1C00D03D53 /* 我的－登录_15@2x.png in Resources */,
 				A0E909E91BE8AB1C00D03D53 /* 首页_16@2x.png in Resources */,
 				A0E909CD1BE8AB1C00D03D53 /* 我的－我的账户_14@2x.png in Resources */,
+				A0E7B0251BF0A3060010A2F0 /* category.plist in Resources */,
 				A0E908A81BE89B6900D03D53 /* Assets.xcassets in Resources */,
 				A0E909B61BE8AB1C00D03D53 /* 团购_全部分类_美食_21@2x.png in Resources */,
 				A0E909AD1BE8AB1C00D03D53 /* search_03@2x.png in Resources */,
@@ -616,6 +650,7 @@
 				A0E909D71BE8AB1C00D03D53 /* 我的－登录_24@2x.png in Resources */,
 				A0E909DF1BE8AB1C00D03D53 /* 设置_16@2x.png in Resources */,
 				A0E909CF1BE8AB1C00D03D53 /* 我的－登录_02@2x.png in Resources */,
+				A0E7B0261BF0A3060010A2F0 /* region.plist in Resources */,
 				A0E909D61BE8AB1C00D03D53 /* 我的－登录_21@2x.png in Resources */,
 				A0E909B51BE8AB1C00D03D53 /* 团购_全部分类_美食_12@2x.png in Resources */,
 				A0E909E11BE8AB1C00D03D53 /* 首页0_03.png in Resources */,
@@ -702,15 +737,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A04B90A91BEB375A00309D5A /* BusinessViewController.m in Sources */,
 				A04B90A61BEB34BC00309D5A /* DianpingApi.m in Sources */,
+				A0E7B0121BF07CFD0010A2F0 /* WebViewController.m in Sources */,
+				A0E7B0221BF09F640010A2F0 /* SelectCityViewController.m in Sources */,
+				A0E7B01E1BF08C710010A2F0 /* HomePageViewController.m in Sources */,
 				A04B90A21BEA0BB400309D5A /* HomePageHeaderView.m in Sources */,
 				A03CE8171BEB5B7C00A68D72 /* BusinessTableViewCell.m in Sources */,
-				A04B909F1BE9E19800309D5A /* HomePageViewController.m in Sources */,
+				A0E7B01D1BF08C710010A2F0 /* BusinessViewController.m in Sources */,
 				A0E908A01BE89B6900D03D53 /* AppDelegate.m in Sources */,
 				A0E909F41BE8B1E800D03D53 /* GuideViewController.m in Sources */,
 				A04B90AC1BEB4FF500309D5A /* JsonParser.m in Sources */,
 				A0E9089D1BE89B6900D03D53 /* main.m in Sources */,
+				A0E7B01F1BF08C710010A2F0 /* SearchViewController.m in Sources */,
 				A04B90AF1BEB51FE00309D5A /* BusinessInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,6 +11,7 @@
 #import "DianpingApi.h"
 #import "BusinessTableViewCell.h"
 #import "BusinessViewController.h"
+#import "WebViewController.h"
 @interface HomePageViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong,nonatomic)NSMutableArray *businesses;
@@ -94,6 +95,16 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     NSString *titie =  @"猜你喜欢";
     return titie;
+}
+
+#pragma tableView delegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    BusinessInfo *business = self.businesses[indexPath.row];
+    WebViewController *webVC = [[WebViewController alloc]init];
+    webVC.urlString = business.business_url;
+    //跳转的
+    webVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:webVC animated:YES];
 }
 
 #pragma mark - Navigation

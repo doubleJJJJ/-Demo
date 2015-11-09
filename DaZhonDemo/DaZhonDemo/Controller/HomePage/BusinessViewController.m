@@ -9,6 +9,7 @@
 #import "BusinessViewController.h"
 #import "BusinessTableViewCell.h"
 #import "DianpingApi.h"
+#import "WebViewController.h"
 @interface BusinessViewController ()
 @property (nonatomic,strong)NSMutableArray *business;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -54,6 +55,14 @@
     return 90;
 }
 
+#pragma tableView delegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    BusinessInfo *business = self.business[indexPath.row];
+    WebViewController *webVC = [[WebViewController alloc]init];
+    webVC.urlString = business.business_url;
+    webVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:webVC animated:YES];
+}
 /*
 #pragma mark - Navigation
 
