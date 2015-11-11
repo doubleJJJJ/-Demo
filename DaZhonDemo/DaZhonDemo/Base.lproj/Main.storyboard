@@ -149,7 +149,7 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="北京" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bys-Kk-ibD">
                                         <rect key="frame" x="0.0" y="5" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -239,25 +239,44 @@
             </objects>
             <point key="canvasLocation" x="2042" y="1653"/>
         </scene>
-        <!--View Controller-->
+        <!--Group Buys View Controller-->
         <scene sceneID="v3h-hf-x2X">
             <objects>
-                <viewController id="bFd-dm-qVJ" sceneMemberID="viewController">
+                <viewController id="bFd-dm-qVJ" customClass="GroupBuysViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WjY-XD-5Cj"/>
                         <viewControllerLayoutGuide type="bottom" id="k8G-JD-kuJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="d2b-d7-mfA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WT7-5e-cb0">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="bFd-dm-qVJ" id="YG9-0H-7uk"/>
+                                    <outlet property="delegate" destination="bFd-dm-qVJ" id="EGh-Dp-Ciw"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="WT7-5e-cb0" secondAttribute="trailing" id="31o-4u-NaK"/>
+                            <constraint firstItem="WT7-5e-cb0" firstAttribute="top" secondItem="WjY-XD-5Cj" secondAttribute="bottom" id="4ny-uu-hat"/>
+                            <constraint firstAttribute="bottom" secondItem="WT7-5e-cb0" secondAttribute="bottom" id="bb3-6L-PR1"/>
+                            <constraint firstItem="WT7-5e-cb0" firstAttribute="leading" secondItem="d2b-d7-mfA" secondAttribute="leading" id="oAC-X9-OcU"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aet-IX-PLo"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tableView" destination="WT7-5e-cb0" id="zNt-1Z-wOs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="39E-hI-gaL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1479" y="957"/>
+            <point key="canvasLocation" x="1444" y="993"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Ubh-0z-gL4">
@@ -325,7 +344,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xOn-GD-Qxe" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="团购" image="设置_18.png" id="01Z-vW-LKM"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nfu-kF-hkx">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="nfu-kF-hkx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

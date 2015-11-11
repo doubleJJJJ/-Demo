@@ -8,6 +8,7 @@
 
 #import "JsonParser.h"
 #import "BusinessInfo.h"
+#import "GroupBuys.h"
 @implementation JsonParser
 + (NSMutableArray *)parseBussinessByDic:(NSDictionary *)dic{
     NSMutableArray *business = [NSMutableArray array];
@@ -37,5 +38,31 @@
         [business addObject:b];
     }
     return business;
+}
+
++ (NSMutableArray *)parseGroupBuysByDic:(NSDictionary *)dic{
+    NSMutableArray *groupBuys = [NSMutableArray array];
+    NSArray *groupsBuysArr = [dic objectForKey:@"deals"];
+    for (NSDictionary *groupBuysDic in groupsBuysArr) {
+        GroupBuys *g = [[GroupBuys alloc]init];
+        g.deal_id = [groupBuysDic objectForKey:@"deal_id"];
+        g.title = [groupBuysDic objectForKey:@"title"];
+        g.regions = [groupBuysDic objectForKey:@"regions"];
+        g.current_price = [NSString stringWithFormat:@"%.1f",[[groupBuysDic objectForKey:@"current_price"]floatValue]];
+        g.categories = [groupBuysDic objectForKey:@"categories"];
+        g.purchase_count = [[groupBuysDic objectForKey:@"purchase_count"]integerValue];
+        g.distance = [groupBuysDic objectForKey:@"distance"];
+        g.image_url = [groupBuysDic objectForKey:@"image_url"];
+        g.s_image_url = [groupBuysDic objectForKey:@"s_image_url"];
+        g.deal_h5_url = [groupBuysDic objectForKey:@"deal_h5_url"];
+        g.businesses = [groupBuysDic objectForKey:@"businesses"];
+        for (NSDictionary *businessDic in g.businesses) {
+            g.latitude = [businessDic objectForKey:@"latitude"];
+            g.longitude = [businessDic objectForKey:@"longitude"];
+        }
+        g.rating_s_img_url = [groupBuysDic objectForKey:@"rating_s_img_url"];
+        [groupBuys addObject:g];
+    }
+    return groupBuys;
 }
 @end

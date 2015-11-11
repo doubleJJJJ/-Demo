@@ -85,4 +85,25 @@
         NSLog(@"请求失败");
     }];
 }
+
+//发送请求获得团购信息
++ (void)requestGroupBuysWithParams:(NSDictionary *)params AndCallback:(MyCallback)callback{
+    NSString *cityName = [[NSUserDefaults standardUserDefaults]objectForKey:@"cityName"];
+    NSMutableDictionary *allParams = [params mutableCopy];
+    [allParams setObject:cityName forKey:@"city"];
+    NSString *path = @"http://api.dianping.com/v1/deal/find_deals";
+    path = [DianpingApi serializeURL:path params:allParams];
+    
+    AFHTTPRequestOperationManager *manger = [AFHTTPRequestOperationManager manager];
+    [manger setResponseSerializer:[AFHTTPResponseSerializer serializer]];
+    [manger GET:path parameters:allParams success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
+        NSArray *groupBuys = [JsonParser parseGroupBuysByDic:dic];
+        callback(groupBuys);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"请求失败");
+    }];
+
+}
+
 @end
