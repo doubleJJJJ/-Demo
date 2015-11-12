@@ -39,6 +39,11 @@
 		A0E7B0531BF3292C0010A2F0 /* GroupBuys.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E7B0521BF3292C0010A2F0 /* GroupBuys.m */; settings = {ASSET_TAGS = (); }; };
 		A0E7B0571BF3337B0010A2F0 /* GroupBuysTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E7B0551BF3337B0010A2F0 /* GroupBuysTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		A0E7B0581BF3337B0010A2F0 /* GroupBuysTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0E7B0561BF3337B0010A2F0 /* GroupBuysTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		A0E7B0611BF46DD00010A2F0 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E7B0601BF46DD00010A2F0 /* FirstViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A0E7B0641BF46DE40010A2F0 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E7B0631BF46DE40010A2F0 /* SecondViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A0E7B0671BF46E860010A2F0 /* ThirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E7B0661BF46E860010A2F0 /* ThirstViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A0E7B06B1BF4813E0010A2F0 /* NearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E7B06A1BF4813E0010A2F0 /* NearViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A0E7B0751BF488A90010A2F0 /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E7B0741BF488A90010A2F0 /* SettingTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		A0E9089D1BE89B6900D03D53 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E9089C1BE89B6900D03D53 /* main.m */; };
 		A0E908A01BE89B6900D03D53 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E9089F1BE89B6900D03D53 /* AppDelegate.m */; };
 		A0E908A61BE89B6900D03D53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0E908A41BE89B6900D03D53 /* Main.storyboard */; };
@@ -184,6 +189,16 @@
 		A0E7B0541BF3337B0010A2F0 /* GroupBuysTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GroupBuysTableViewCell.h; path = View/GroupBuysTableViewCell.h; sourceTree = "<group>"; };
 		A0E7B0551BF3337B0010A2F0 /* GroupBuysTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GroupBuysTableViewCell.m; path = View/GroupBuysTableViewCell.m; sourceTree = "<group>"; };
 		A0E7B0561BF3337B0010A2F0 /* GroupBuysTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GroupBuysTableViewCell.xib; path = View/GroupBuysTableViewCell.xib; sourceTree = "<group>"; };
+		A0E7B05F1BF46DD00010A2F0 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = Controller/GroupBuys/FirstViewController.h; sourceTree = "<group>"; };
+		A0E7B0601BF46DD00010A2F0 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = Controller/GroupBuys/FirstViewController.m; sourceTree = "<group>"; };
+		A0E7B0621BF46DE40010A2F0 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecondViewController.h; path = Controller/GroupBuys/SecondViewController.h; sourceTree = "<group>"; };
+		A0E7B0631BF46DE40010A2F0 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecondViewController.m; path = Controller/GroupBuys/SecondViewController.m; sourceTree = "<group>"; };
+		A0E7B0651BF46E860010A2F0 /* ThirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThirstViewController.h; path = Controller/GroupBuys/ThirstViewController.h; sourceTree = "<group>"; };
+		A0E7B0661BF46E860010A2F0 /* ThirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThirstViewController.m; path = Controller/GroupBuys/ThirstViewController.m; sourceTree = "<group>"; };
+		A0E7B0691BF4813E0010A2F0 /* NearViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NearViewController.h; path = Controller/Near/NearViewController.h; sourceTree = "<group>"; };
+		A0E7B06A1BF4813E0010A2F0 /* NearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NearViewController.m; path = Controller/Near/NearViewController.m; sourceTree = "<group>"; };
+		A0E7B0731BF488A90010A2F0 /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingTableViewController.h; path = Controller/Setting/SettingTableViewController.h; sourceTree = "<group>"; };
+		A0E7B0741BF488A90010A2F0 /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingTableViewController.m; path = Controller/Setting/SettingTableViewController.m; sourceTree = "<group>"; };
 		A0E908981BE89B6900D03D53 /* DaZhonDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaZhonDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0E9089C1BE89B6900D03D53 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A0E9089E1BE89B6900D03D53 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -348,6 +363,12 @@
 			children = (
 				A0E7B02E1BF2E4100010A2F0 /* GroupBuysViewController.h */,
 				A0E7B02F1BF2E4100010A2F0 /* GroupBuysViewController.m */,
+				A0E7B05F1BF46DD00010A2F0 /* FirstViewController.h */,
+				A0E7B0601BF46DD00010A2F0 /* FirstViewController.m */,
+				A0E7B0621BF46DE40010A2F0 /* SecondViewController.h */,
+				A0E7B0631BF46DE40010A2F0 /* SecondViewController.m */,
+				A0E7B0651BF46E860010A2F0 /* ThirstViewController.h */,
+				A0E7B0661BF46E860010A2F0 /* ThirstViewController.m */,
 			);
 			name = GroupBuys;
 			sourceTree = "<group>";
@@ -389,6 +410,24 @@
 				A0E7B0431BF2EB460010A2F0 /* pinyin.h */,
 			);
 			path = pinyin;
+			sourceTree = "<group>";
+		};
+		A0E7B0681BF4810B0010A2F0 /* Near */ = {
+			isa = PBXGroup;
+			children = (
+				A0E7B0691BF4813E0010A2F0 /* NearViewController.h */,
+				A0E7B06A1BF4813E0010A2F0 /* NearViewController.m */,
+			);
+			name = Near;
+			sourceTree = "<group>";
+		};
+		A0E7B06C1BF483550010A2F0 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				A0E7B0731BF488A90010A2F0 /* SettingTableViewController.h */,
+				A0E7B0741BF488A90010A2F0 /* SettingTableViewController.m */,
+			);
+			name = Setting;
 			sourceTree = "<group>";
 		};
 		A0E9088F1BE89B6900D03D53 = {
@@ -497,6 +536,8 @@
 				A0E7B0111BF07CFD0010A2F0 /* WebViewController.m */,
 				A0E7B0131BF08BA30010A2F0 /* HomePage */,
 				A0E7B02D1BF2E3750010A2F0 /* GroupBuys */,
+				A0E7B0681BF4810B0010A2F0 /* Near */,
+				A0E7B06C1BF483550010A2F0 /* Setting */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -846,15 +887,20 @@
 				A0E7B04B1BF2EB460010A2F0 /* MHTabBarController.m in Sources */,
 				A04B90A61BEB34BC00309D5A /* DianpingApi.m in Sources */,
 				A0E7B0121BF07CFD0010A2F0 /* WebViewController.m in Sources */,
+				A0E7B0641BF46DE40010A2F0 /* SecondViewController.m in Sources */,
+				A0E7B0751BF488A90010A2F0 /* SettingTableViewController.m in Sources */,
 				A0E7B0221BF09F640010A2F0 /* SelectCityViewController.m in Sources */,
 				A0E7B01E1BF08C710010A2F0 /* HomePageViewController.m in Sources */,
+				A0E7B0671BF46E860010A2F0 /* ThirstViewController.m in Sources */,
 				A0E7B0501BF2EB460010A2F0 /* pinyin.c in Sources */,
 				A04B90A21BEA0BB400309D5A /* HomePageHeaderView.m in Sources */,
+				A0E7B0611BF46DD00010A2F0 /* FirstViewController.m in Sources */,
 				A03CE8171BEB5B7C00A68D72 /* BusinessTableViewCell.m in Sources */,
 				A0E7B0481BF2EB460010A2F0 /* MHCategoryViewController.m in Sources */,
 				A0E7B01D1BF08C710010A2F0 /* BusinessViewController.m in Sources */,
 				A0E908A01BE89B6900D03D53 /* AppDelegate.m in Sources */,
 				A0E7B0301BF2E4100010A2F0 /* GroupBuysViewController.m in Sources */,
+				A0E7B06B1BF4813E0010A2F0 /* NearViewController.m in Sources */,
 				A0E909F41BE8B1E800D03D53 /* GuideViewController.m in Sources */,
 				A04B90AC1BEB4FF500309D5A /* JsonParser.m in Sources */,
 				A0E7B0531BF3292C0010A2F0 /* GroupBuys.m in Sources */,

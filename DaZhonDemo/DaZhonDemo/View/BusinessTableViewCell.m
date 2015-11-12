@@ -7,7 +7,7 @@
 //
 
 #import "BusinessTableViewCell.h"
-#import <UIImageView+AFNetworking.h>
+#import <UIImageView+WebCache.h>
 @implementation BusinessTableViewCell
 
 - (void)layoutSubviews{
@@ -21,6 +21,7 @@
         self.coupon_description.text = self.business.coupon_description;
     }
     self.deal_count.text = [@"已售" stringByAppendingString:[NSString stringWithFormat:@"%ld",(long)self.business.deal_count]];
-    [self.s_photo setImageWithURL:[NSURL URLWithString:self.business.s_photo_url]];}
+    [self.s_photo sd_setImageWithURL:[NSURL URLWithString:self.business.s_photo_url]];
+}
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "GroupBuysTableViewCell.h"
-#import <UIImageView+AFNetworking.h>
+#import <UIImageView+WebCache.h>
 @implementation GroupBuysTableViewCell
 
 - (void)layoutSubviews{
@@ -25,7 +25,7 @@
     self.review_label.text =[ @"已售" stringByAppendingString:[NSString stringWithFormat:@"%d",(int)self.groupBuys.purchase_count] ];
     self.distance_label.text = [[NSString stringWithFormat:@"%@",self.groupBuys.distance] stringByAppendingString:@"米"];
     self.name_label.text = self.groupBuys.title;
-    [self.s_image setImageWithURL:[NSURL URLWithString:self.groupBuys.s_image_url]];
+    [self.s_image sd_setImageWithURL:[NSURL URLWithString:self.groupBuys.s_image_url]];
     //显示地区
     if ([self.groupBuys.regions count]>0) {
         if ([self.groupBuys.regions count] == 1) {
