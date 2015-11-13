@@ -7,9 +7,9 @@
 //
 
 #import "WebViewController.h"
-
-@interface WebViewController ()
-
+#import <MBProgressHUD.h>
+@interface WebViewController ()<UIWebViewDelegate>
+@property (nonatomic,strong) MBProgressHUD *hud;
 @end
 
 @implementation WebViewController
@@ -23,13 +23,26 @@
     [self.webView.scrollView setContentInset:UIEdgeInsetsMake(-44, 0, 0, 0)];
     [self.webView loadRequest:request];
     [self.view addSubview:self.webView];
+    self.webView.delegate = self;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)webViewDidStartLoad:(UIWebView *)webView{
+    //初始化指示器
+    self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    self.hud.mode = MBProgressHUDModeText;
+    self.hud.labelText = @"正在加载....";
+    self.hud.labelFont = [UIFont fontWithName:@"Arial" size:13];
 }
 
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
+    self.hud.labelText = @"加载成功";
+    [self.hud hide:YES afterDelay:1];
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(nullable NSError *)error{
+    self.hud.labelText = @"加载失败";
+    [self.hud hide:YES afterDelay:1];
+}
 /*
 #pragma mark - Navigation
 

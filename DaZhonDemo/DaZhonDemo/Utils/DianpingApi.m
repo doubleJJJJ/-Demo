@@ -83,6 +83,7 @@
         callback(bussinesses);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"请求失败");
+        callback(nil);
     }];
 }
 
@@ -102,6 +103,7 @@
         callback(groupBuys);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"请求失败");
+        callback(nil);
     }];
 
 }

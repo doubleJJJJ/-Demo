@@ -12,12 +12,14 @@
 #import "BusinessTableViewCell.h"
 #import "BusinessViewController.h"
 #import "WebViewController.h"
+#import <MBProgressHUD.h>
 @interface HomePageViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong,nonatomic)NSMutableArray *businesses;
 @property (nonatomic,strong) NSMutableDictionary *params;
 @property (nonatomic) int currentPage;
 @property (weak, nonatomic) IBOutlet UILabel *cityNameLabel;
+@property (nonatomic,strong) MBProgressHUD* hud;
 
 @end
 
@@ -52,10 +54,22 @@
         [ud synchronize];
     }
     self.cityNameLabel.text = cityName;
+    //初始化指示器
+    self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    self.hud.mode = MBProgressHUDModeText;
+    self.hud.labelText = @"正在加载....";
+    self.hud.labelFont = [UIFont fontWithName:@"Arial" size:13];
     //发送请求
     [DianpingApi requestBusinessWithParams:self.params AndCallback:^(id obj) {
         self.businesses = obj;
         [self.tableView reloadData];
+        if (self.businesses == nil) {
+            self.hud.labelText = @"加载失败";
+            [self.hud hide:YES afterDelay:1];
+        }else{
+            self.hud.labelText = @"加载成功";
+            [self.hud hide:YES afterDelay:1];
+        }
     }];
 }
 

@@ -14,6 +14,7 @@
 #import "FirstViewController.h"
 #import "SecondViewController.h"
 #import "ThirstViewController.h"
+#import <MBProgressHUD.h>
 @interface GroupBuysViewController ()<MHTabBarControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -21,6 +22,7 @@
 @property (nonatomic,strong)NSMutableDictionary *params;
 @property (nonatomic)int currentPage;
 @property (nonatomic,strong)MHTabBarController *tbc;
+@property (nonatomic,strong) MBProgressHUD* hud;
 @end
 
 @implementation GroupBuysViewController
@@ -61,9 +63,21 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    //初始化指示器
+    self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    self.hud.mode = MBProgressHUDModeText;
+    self.hud.labelText = @"正在加载....";
+    self.hud.labelFont = [UIFont fontWithName:@"Arial" size:13];
     [DianpingApi requestGroupBuysWithParams:@{} AndCallback:^(id obj) {
         self.groupBuys = obj;
         [self.tableView reloadData];
+        if (self.groupBuys == nil) {
+            self.hud.labelText = @"加载失败";
+            [self.hud hide:YES afterDelay:1];
+        }else{
+            self.hud.labelText = @"加载成功";
+            [self.hud hide:YES afterDelay:1];
+        }
     }];
     //创建顶部tabBar
     [self createTabBar];

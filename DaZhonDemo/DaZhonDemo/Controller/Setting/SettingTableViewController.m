@@ -9,7 +9,7 @@
 #import "SettingTableViewController.h"
 #import <UIImageView+WebCache.h>
 #import <SDImageCache.h>
-@interface SettingTableViewController ()
+@interface SettingTableViewController ()<UIAlertViewDelegate>
 
 
 @end
@@ -45,8 +45,13 @@
     }else{
         if (indexPath.row == 0) {
             NSLog(@"清空缓存");
-            [[SDImageCache sharedImageCache]cleanDisk];
-            
+            //计算缓存图片大小
+            float folderSize = 0;
+            folderSize+=[[SDImageCache sharedImageCache] getSize]/1024.0/1024.0;
+            //创建提示框
+            NSString *text = [NSString stringWithFormat:@"缓存大小为%.1fM,确定要清理缓存吗？",folderSize];
+            UIAlertView *clearAV = [[UIAlertView alloc]initWithTitle:@"提示" message:text delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+            [clearAV show];
         }else if (indexPath.row == 1){
             NSLog(@"意见反馈");
         }else{
@@ -55,13 +60,12 @@
     }
 }
 
-+(float)fileSizeAtPath:(NSString *)path{
-    NSFileManager *fileManager=[NSFileManager defaultManager];
-    if([fileManager fileExistsAtPath:path]){
-        long long size=[fileManager attributesOfItemAtPath:path error:nil].fileSize;
-        return size/1024.0/1024.0;
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 1) {
+        //清理缓存图片
+        [[SDImageCache sharedImageCache] clearDisk];
     }
-    return 0;
 }
+
 
 @end
