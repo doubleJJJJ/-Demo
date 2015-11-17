@@ -13,6 +13,7 @@
 #import "BusinessViewController.h"
 #import "WebViewController.h"
 #import <MBProgressHUD.h>
+#import "MJRefresh.h"
 @interface HomePageViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong,nonatomic)NSMutableArray *businesses;
@@ -31,11 +32,12 @@
     self.navigationController.navigationBar.barTintColor = TOPIC_COLOR_ORANGE;
     HomePageHeaderView *headerView = [[HomePageHeaderView alloc]init];
     self.tableView.tableHeaderView = headerView;
-    //设置请求参数
-    self.params = [NSMutableDictionary dictionary];
-    self.currentPage = 1;
-    [self.params setObject:@(self.currentPage) forKey:@"page"];
-    [self.params setObject:@(20) forKey:@"limit"];
+    //下拉刷新
+    [self getCurrentData];
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        //进入刷新状态后会自动调用这个block
+        [self getCurrentData];
+    }];
     //添加监听，用户点击headView时响应
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(clickCategory:) name:@"clickCategory" object:nil];
 }
@@ -45,7 +47,8 @@
     [self performSegueWithIdentifier:@"businessvc" sender:category];
 }
 
-- (void)viewDidAppear:(BOOL)animated{
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     NSString *cityName = [ud objectForKey:@"cityName"];
     if (cityName == nil) {
@@ -54,6 +57,14 @@
         [ud synchronize];
     }
     self.cityNameLabel.text = cityName;
+}
+
+- (void)getCurrentData{
+    //设置请求参数
+    self.params = [NSMutableDictionary dictionary];
+    self.currentPage = 1;
+    [self.params setObject:@(self.currentPage) forKey:@"page"];
+    [self.params setObject:@(20) forKey:@"limit"];
     //初始化指示器
     self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     self.hud.mode = MBProgressHUDModeText;
@@ -66,9 +77,11 @@
         if (self.businesses == nil) {
             self.hud.labelText = @"加载失败";
             [self.hud hide:YES afterDelay:1];
+            [self.tableView.mj_header endRefreshing];
         }else{
             self.hud.labelText = @"加载成功";
             [self.hud hide:YES afterDelay:1];
+            [self.tableView.mj_header endRefreshing];
         }
     }];
 }

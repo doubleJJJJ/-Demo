@@ -15,6 +15,7 @@
 #import "SecondViewController.h"
 #import "ThirstViewController.h"
 #import <MBProgressHUD.h>
+#import "MJRefresh.h"
 @interface GroupBuysViewController ()<MHTabBarControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -53,9 +54,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.params = [NSMutableDictionary dictionary];
-    self.currentPage = 1;
-    [self.params setObject:@(self.currentPage) forKey:@"page"];
+    //下拉刷新
+    [self getCurrentData];
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        //进入刷新状态后会自动调用这个block
+        [self getCurrentData];
+    }];
     //设置导航栏
     self.navigationController.navigationBar.barTintColor = TOPIC_COLOR_ORANGE;
 }
@@ -63,24 +67,35 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    //创建顶部tabBar
+    [self createTabBar];
+    
+}
+
+- (void)getCurrentData{
+    //设置参数
+    self.params = [NSMutableDictionary dictionary];
+    self.currentPage = 1;
+    [self.params setObject:@(self.currentPage) forKey:@"page"];
     //初始化指示器
     self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     self.hud.mode = MBProgressHUDModeText;
     self.hud.labelText = @"正在加载....";
     self.hud.labelFont = [UIFont fontWithName:@"Arial" size:13];
+    //发送请求
     [DianpingApi requestGroupBuysWithParams:@{} AndCallback:^(id obj) {
         self.groupBuys = obj;
         [self.tableView reloadData];
         if (self.groupBuys == nil) {
             self.hud.labelText = @"加载失败";
             [self.hud hide:YES afterDelay:1];
+            [self.tableView.mj_header endRefreshing];
         }else{
             self.hud.labelText = @"加载成功";
             [self.hud hide:YES afterDelay:1];
+            [self.tableView.mj_header endRefreshing];
         }
     }];
-    //创建顶部tabBar
-    [self createTabBar];
 }
 
 - (void)createTabBar{
@@ -100,6 +115,7 @@
     //设置为headView
     self.tableView.tableHeaderView = self.tbc.view;
     self.tableView.contentInset = UIEdgeInsetsMake(-64, 0, 0, 0);
+    //self.edgesForExtendedLayout = UIRectEdgeNone;
     
 }
 

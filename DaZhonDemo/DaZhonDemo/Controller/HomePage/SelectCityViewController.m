@@ -33,8 +33,6 @@
         }
         [newCitys addObject:cityName];
     }
-    //把plist文件保存到桌面
-    [self.cityDic writeToFile:@"/Users/doubleJJ/Desktop/citys.plist"  atomically:YES];
     self.allKeys = [self.cityDic.allKeys sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
         return [obj1 compare:obj2];
     }];

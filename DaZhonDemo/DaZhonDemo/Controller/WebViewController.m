@@ -24,9 +24,6 @@
     [self.webView loadRequest:request];
     [self.view addSubview:self.webView];
     self.webView.delegate = self;
-}
-
-- (void)webViewDidStartLoad:(UIWebView *)webView{
     //初始化指示器
     self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     self.hud.mode = MBProgressHUDModeText;
@@ -34,14 +31,18 @@
     self.hud.labelFont = [UIFont fontWithName:@"Arial" size:13];
 }
 
+
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
     self.hud.labelText = @"加载成功";
     [self.hud hide:YES afterDelay:1];
+    //[self.hud removeFromSuperview];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(nullable NSError *)error{
-    self.hud.labelText = @"加载失败";
+    NSLog(@"%@",error);
+    self.hud.labelText = @"正在加载....";
     [self.hud hide:YES afterDelay:1];
+    //[self.hud removeFromSuperview];
 }
 /*
 #pragma mark - Navigation
